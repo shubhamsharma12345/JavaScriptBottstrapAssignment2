@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../Content/bootstrap.min.css" />
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+           
+
+            $("#add").click(function () {
+
+
+                var x = parseInt($("#num1").val());
+
+                var y = parseInt($("#num2").val());
+                var z = x + y;
+                $("#result").val(z);
+            });
+
+            $("Subtract").click(function () {
+
+
+                var x = parseInt($("#num1").val());
+
+                var y = parseInt($("#num2").val());
+                var z = x - y;
+                $("#result").val(z);
+            });
+
+            $("#divide").click(function () {
+
+
+                var x = parseInt($("#num1").val());
+
+                var y = parseInt($("#num2").val());
+                var z = x / y;
+                $("#result").val(z);
+            });
+            $("#multiply").click(function () {
+
+
+                var x = parseInt($("#num1").val());
+
+                var y = parseInt($("#num2").val());
+                var z = x * y;
+                $("#result").val(z);
+            });
+            $("#change").click(function () {
+                let ele = $(".form-control");
+                for (let i = 0; i < ele.length; i++) {
+
+                    ele[i].style.backgroundColor = "yellow";
+                }
+            });
+
+        });
+
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        Enter first number :
+                        <input type="number" class="form-control" id="num1">
+                    </div>
+
+                    <div class="form-group">
+                        Enter second number :
+                        <input type="number" class="form-control" id="num2">
+                    </div>
+
+                    <div class="form-group">
+                       Result :
+                        <input type="number" class="form-control" id="result">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="add"> Add </button>
+                    <button type="button" class="btn btn-primary" id="Subtract"> Subtract </button>
+                    <button type="button" class="btn btn-primary" id="divide"> Divide </button>
+                    <button type="button" class="btn btn-primary" id="multiply"> Multiply </button>
+                    <button type="button" class="btn btn-success" id="change"> Change</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
